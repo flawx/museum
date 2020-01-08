@@ -1,0 +1,21 @@
+<div class="topnav">
+  <a class="active" href="<%= arts_path %>">Virtual museum</a>
+  <a href="<%= new_art_path %>">New art</a>
+</div>
+
+<div class="separator"></div>
+
+<p id="notice"><%= notice %></p>
+
+<h1><%= @art.author %>, <i><%= @art.title %></i></h1>
+
+<h3><%= @art.date %></h3>
+
+<a href="<%= arts_path %>" class="toplink"><i class="material-icons">keyboard_backspace</i> Back</a> |
+<a href="<%= edit_art_path %>" class="toplink"><i class="material-icons">edit</i> Edit</a>
+
+<br><br>
+
+<img src="<%= @art.photo %>" class="showimage">
+
+<p class="showtext"><%= @art.description %></p>

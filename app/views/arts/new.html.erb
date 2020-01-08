@@ -1,0 +1,12 @@
+<div class="topnav">
+  <a href="<%= arts_path %>">Virtual museum</a>
+  <a class="active" href="<%= new_art_path %>">New art</a>
+</div>
+
+<div class="separator"></div>
+
+<a href="<%= arts_path %>" class="toplink"><i class="material-icons">keyboard_backspace</i> Back</a>
+
+<h1>New art</h1>
+
+<%= render 'form', art: @art %>
