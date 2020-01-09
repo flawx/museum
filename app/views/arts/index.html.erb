@@ -10,8 +10,14 @@
 <div class="slideshow-container">
   <% @arts.each do |art| %>
     <div class="mySlides fade">
-      <div class="numbertext"><%= link_to 'Voir', art %> | <%= link_to 'Modifier', edit_art_path(art) %> | <%= link_to 'Supprimer', art, method: :delete, data: { confirm: 'Voulez-vous vraiment supprimer cette œuvre ? Cette action est irréversible.' } %></div>
-        <img src="<%= art.photo %>" style="width:100%">
+      <div class="topbuttons">
+        <div class="btn-group">
+          <%= link_to 'Voir', art %>
+          <%= link_to 'Modifier', edit_art_path(art) %>
+          <%= link_to 'Supprimer', art, method: :delete, data: { confirm: 'Voulez-vous vraiment supprimer cette œuvre ? Cette action est irréversible.' } %>
+        </div>
+      </div>
+      <img src="<%= art.photo %>" style="width:100%">
       <div class="text"><%= art.author %>, <i><%= art.title %></i>, <%= art.date %></div>
     </div>
   <% end %>

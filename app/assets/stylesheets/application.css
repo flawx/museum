@@ -80,7 +80,7 @@ p {
 }
 
 .separator {
-	height: 50px;
+	height: 40px;
 }
 
 .slideshow-container {
@@ -142,21 +142,6 @@ p {
 	line-height: 20px;
 }
 
-.numbertext a {
-	color: #fff !important;
-	text-shadow: 1px 1px 2px #000;
-	text-decoration: none;
-}
-
-.numbertext a:visited {
-	color: #fff !important;
-}
-
-.numbertext a:hover {
-	color: #f2f2f2 !important;
-	background-color: transparent !important;
-}
-
 .fade {
   	-webkit-animation-name: fade;
   	-webkit-animation-duration: 1.5s;
@@ -179,6 +164,8 @@ p {
 		width: 100%;
 		float: left;
 		margin-right: 20px;
+		margin-bottom: 20px;
+  		border: solid 4px #4CAF50;
 	}
 }
 
@@ -187,6 +174,8 @@ p {
 		width: 50%;
 		float: left;
 		margin-right: 20px;
+		margin-bottom: 20px;
+  		border: solid 4px #4CAF50;
 	}
 }
 
@@ -235,4 +224,43 @@ a.toplink:hover {
 
 i.material-icons {
 	font-size: 12px;
+}
+
+.topbuttons {
+	text-align: center;
+	line-height: 0px !important;
+}
+
+.btn-group {
+	display: inline-block;
+	width: 100%;
+}
+
+.btn-group a {
+  	background-color: #4CAF50 !important;
+  	border: 1px solid green;
+  	color: white !important;
+  	padding: 14px;
+  	float: left;
+  	width: 33.3%;
+  	text-decoration: none;
+}
+
+.btn-group a:hover {
+	background-color: #ddd !important;
+  	color: #000 !important;
+}
+
+.btn-group a:not(:last-child) {
+  	border-right: none;
+}
+
+.btn-group:after {
+  	content: "";
+  	clear: both;
+  	display: table;
+}
+
+.btn-group button:hover {
+  background-color: #3e8e41;
 }
