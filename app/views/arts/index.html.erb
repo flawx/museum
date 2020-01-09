@@ -1,6 +1,6 @@
 <div class="topnav">
-  <a class="active" href="<%= arts_path %>">Virtual museum</a>
-  <a href="<%= new_art_path %>">New art</a>
+  <a class="active" href="<%= arts_path %>">Nature & animaux</a>
+  <a href="<%= new_art_path %>">Ajouter une œuvre</a>
 </div>
 
 <div class="separator"></div>
@@ -10,7 +10,7 @@
 <div class="slideshow-container">
   <% @arts.each do |art| %>
     <div class="mySlides fade">
-      <div class="numbertext"><%= link_to 'Show', art %> | <%= link_to 'Edit', edit_art_path(art) %> | <%= link_to 'Destroy', art, method: :delete, data: { confirm: 'Are you sure?' } %></div>
+      <div class="numbertext"><%= link_to 'Voir', art %> | <%= link_to 'Modifier', edit_art_path(art) %> | <%= link_to 'Supprimer', art, method: :delete, data: { confirm: 'Voulez-vous vraiment supprimer cette œuvre ? Cette action est irréversible.' } %></div>
         <img src="<%= art.photo %>" style="width:100%">
       <div class="text"><%= art.author %>, <i><%= art.title %></i>, <%= art.date %></div>
     </div>
@@ -19,34 +19,3 @@
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
   <a class="next" onclick="plusSlides(1)">&#10095;</a>
 </div>
-
-<br>
-
-<script type="text/javascript">
-var slideIndex = 1;
-showSlides(slideIndex);
-
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-} 
-</script>

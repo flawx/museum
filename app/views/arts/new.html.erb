@@ -1,12 +1,12 @@
 <div class="topnav">
-  <a href="<%= arts_path %>">Virtual museum</a>
-  <a class="active" href="<%= new_art_path %>">New art</a>
+  <a href="<%= arts_path %>">Nature & animaux</a>
+  <a class="active" href="<%= new_art_path %>">Ajouter une œuvre</a>
 </div>
 
 <div class="separator"></div>
 
-<a href="<%= arts_path %>" class="toplink"><i class="material-icons">keyboard_backspace</i> Back</a>
+<a href="<%= arts_path %>" class="toplink"><i class="material-icons">keyboard_backspace</i> Retour</a>
 
-<h1>New art</h1>
+<h1>Ajouter une œuvre</h1>
 
 <%= render 'form', art: @art %>
