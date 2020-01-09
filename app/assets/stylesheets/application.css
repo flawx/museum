@@ -227,16 +227,16 @@ input[type=button], input[type=submit], input[type=reset] {
 	font-size: 16px;
 }
 
-.toplink a {
+a.toplink {
 	color: #000 !important;
 	text-decoration: none !important;
 }
 
-.toplink a:visited {
+a.toplink:visited {
 	color: #000 !important;
 }
 
-.toplink a:hover {
+a.toplink:hover {
 	color: #333 !important;
 	background-color: transparent !important;
 }
