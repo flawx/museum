@@ -35,6 +35,18 @@ html::after {
   	z-index: -1;   
 }
 
+a {
+	color: #000;
+}
+
+a:visited {
+	color: #000;
+}
+
+a:hover {
+	background-color: transparent !important;
+}
+
 h1 {
 	line-height: 32px;
 }
@@ -59,6 +71,10 @@ p {
   	padding: 14px 16px;
   	text-decoration: none;
   	font-size: 17px;
+}
+
+.topnav a:visited {
+  	color: #f2f2f2;
 }
 
 .topnav a:hover {
@@ -135,9 +151,18 @@ p {
 }
 
 .numbertext a {
-	color: #fff;
+	color: #fff !important;
 	text-shadow: 1px 1px 2px #000;
 	text-decoration: none;
+}
+
+.numbertext a:visited {
+	color: #fff !important;
+}
+
+.numbertext a:hover {
+	color: #f2f2f2 !important;
+	background-color: transparent !important;
 }
 
 .fade {
@@ -203,7 +228,17 @@ input[type=button], input[type=submit], input[type=reset] {
 }
 
 .toplink a {
+	color: #000 !important;
 	text-decoration: none !important;
+}
+
+.toplink a:visited {
+	color: #000 !important;
+}
+
+.toplink a:hover {
+	color: #333 !important;
+	background-color: transparent !important;
 }
 
 i.material-icons {
