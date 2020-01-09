@@ -17,8 +17,30 @@
 * {box-sizing:border-box}
 
 html, body {
-	background-color: aliceblue;
 	font-family: 'Montserrat', sans-serif;
+}
+
+html::after {
+  	content: "";
+	background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Fallingwater_-_DSC05639.JPG/800px-Fallingwater_-_DSC05639.JPG');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+  	opacity: 0.1;
+  	top: 0;
+  	left: 0;
+  	bottom: 0;
+  	right: 0;
+  	position: fixed;
+  	z-index: -1;   
+}
+
+h1 {
+	line-height: 32px;
+}
+
+p {
+	font-size: 16px;
 }
 
 .topnav {
@@ -57,10 +79,12 @@ html, body {
   	max-width: 500px;
   	position: relative;
   	margin: auto;
+  	border: solid 4px #4CAF50;
 }
 
 .mySlides {
   	display: none;
+  	line-height: 0px;
 }
 
 .prev, .next {
@@ -92,10 +116,12 @@ html, body {
   	color: #fff;
   	font-size: 15px;
   	padding: 8px 12px;
+  	bottom: 0;
   	position: absolute;
   	width: 100%;
   	text-align: center;
   	background-color: rgba(0,0,0,0.8);
+  	line-height: 20px;
 }
 
 .numbertext {
@@ -105,6 +131,7 @@ html, body {
   	position: absolute;
   	top: 0;
 	text-shadow: 1px 1px 2px #000;
+	line-height: 20px;
 }
 
 .numbertext a {
@@ -130,10 +157,20 @@ html, body {
   	to {opacity: 1}
 }
 
-img.showimage {
-	width: 500px;
-	float: left;
-	margin-right: 20px;
+@media screen and (max-width: 768px) {
+	img.showimage {
+		width: 100%;
+		float: left;
+		margin-right: 20px;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	img.showimage {
+		width: 50%;
+		float: left;
+		margin-right: 20px;
+	}
 }
 
 p.showtext {
